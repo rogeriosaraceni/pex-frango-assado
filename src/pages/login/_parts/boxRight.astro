@@ -1,0 +1,48 @@
+---
+import FooterLogin from '../_includes/footerLogin.astro'
+---
+
+<section class="box-right">
+    <div class="content-box-right">
+
+        <article class="wrapper-login">
+            <img class="img-fluid logo-login-horizontal" src="/assets/images/login/logo.png" alt="logo" />
+
+            <div class="card card-login slide-in-right" data-login="card">
+                <div class="card-body">
+
+                    <section class="d-flex flex-column align-content-center justify-content-between h-100">
+                        <div class="mb-1">
+                            <div class="title-login">Login</div>
+
+                            <form action="/principal/" method="post">
+                                <label>
+                                    <input type="email" name="email" placeholder="e-mail" class="form-control">
+                                </label>
+
+                                <label>
+                                    <input type="password" name="senha" placeholder="senha" id="senha" class="form-control">
+                                    <span class="btn-showPass" date-bs-toggle="tooltip" data-bs-title="mostrar/esconder senha">
+                                        <i data-js="currentTogglePass" class="bi bi-lock"></i>
+                                    </span>
+                                </label>
+
+                                <button type="submit" class="btn form-control btn-submit d-flex align-items-center justify-content-center">Entrar</button>
+                            </form>
+
+                            <div class="d-flex justify-content-center my-4">
+                                <a class="text-black-50" href="">
+                                    <small>Esqueceu a senha?</small>
+                                </a>
+                            </div>
+                        </div>
+
+                        <FooterLogin />
+                    </section>
+
+                </div><!-- card-body -->
+            </div><!-- card -->
+        </article><!-- wrapper-login -->
+
+    </div><!-- content-box-right -->
+</section><!-- box-right -->

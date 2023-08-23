@@ -1,0 +1,36 @@
+---
+import Head from '@includes/Head.astro';
+import BoxLeft from './_parts/boxLeft.astro';
+import BoxRight from './_parts/boxRight.astro';
+
+import '@styles/login.css'
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <Head />
+
+    <body class="body-login">
+        <main class="wrapper-grid">
+            <BoxLeft />
+            <BoxRight />
+        </main>
+    </body>
+</html>
+
+<script is:inline>
+    /*! --------------------------------------------------------------------
+    * mostra senha
+    * --------------------------------------------------------------------*/
+    let btnShowAllPassword = document.querySelectorAll(".btn-showPass");
+
+    btnShowAllPassword.forEach((item) => {
+        item.addEventListener("click", () => {
+            item.children[0].classList.toggle("bi-unlock");
+            const inputPass = item.parentNode.children[0];
+            const type =
+                inputPass.getAttribute("type") === "password" ? "text" : "password";
+            inputPass.setAttribute("type", type);
+        });
+    });
+</script>

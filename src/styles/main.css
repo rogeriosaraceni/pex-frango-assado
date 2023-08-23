@@ -1,0 +1,120 @@
+/* ////////////////////////////////////////////////////////////////////
+imports
+html, body, body-popup
+main-app, container-fluid
+link
+heading
+scrollbar
+section-title
+//////////////////////////////////////////////////////////////////// */
+
+@import 'theme.css';
+@import 'variables-colors.css';
+@import 'bootstrap-custom.css';
+@import 'parts.css';
+@import 'form.css';
+@import 'pages.css';
+
+
+/* --------------------------------------------------------------------
+html, body, body-popup
+---------------------------------------------------------------------- */
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Livvic', sans-serif;
+    transition: all 0.3s;
+    overflow-x: hidden;
+    background-color: var(--bs-body-bg);
+}
+.body-popup {
+    padding: 1rem;
+    height: auto;
+}
+
+/* --------------------------------------------------------------------
+main-app, container-fluid
+---------------------------------------------------------------------- */
+.main-app{
+    flex: 1;
+    padding: 1rem;
+}
+
+.container-fluid{
+    max-width: 1600px;
+}
+
+/* --------------------------------------------------------------------
+link
+---------------------------------------------------------------------- */
+a {
+    transition: all 0.3s ease 0s;
+}
+
+/* --------------------------------------------------------------------
+heading
+---------------------------------------------------------------------- */
+/*
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: 'Fraunces', serif;
+}
+*/
+
+/* --------------------------------------------------------------------
+scrollbar CSS v1.2
+Last update: 06 jul 2021
+Rogerio Saraceni
+* -------------------------------------------------------------------- */
+:root {
+    --scrollbar-bg: #f7f2f2;
+    --scrollbar-bg-track: #bebcbc;
+    --scrollbar-bg-thumb: #bbb5b5;
+}
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-bg-track) var(--scrollbar-bg);
+}
+/* Works on Chrome, Edge, and Safari */
+::-webkit-scrollbar { width: 10px;}
+::-webkit-scrollbar { height: 10px;}
+::-webkit-scrollbar-track { background: var(--scrollbar-bg);}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--scrollbar-bg-track);
+}
+
+/* --------------------------------------------------------------------
+section-title
+---------------------------------------------------------------------- */
+.section-title {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
+.section-title .title {
+    font-size: 1.1rem;
+    color: var(--bs-color);
+}
+
+.section-title:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -2px;
+    width: 50px;
+    height: 0;
+    border-top: 2px solid var(--bs-border-color);
+    transition: height 0.3s, bottom, top ease 0s;
+    z-index: 0
+}

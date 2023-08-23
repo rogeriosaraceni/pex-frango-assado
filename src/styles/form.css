@@ -1,0 +1,167 @@
+/* ////////////////////////////////////////////////////////////////////
+input
+form-check-label
+form-check-input
+form-group
+input-group-text
+label
+label-clearfix
+list-group-item
+custom-file
+wrapper-custom-file
+readonly, disabled
+placeholder
+//////////////////////////////////////////////////////////////////// */
+
+/* --------------------------------------------------------------------
+input
+* -------------------------------------------------------------------- */
+input[type="file"].form-control {
+    padding-top: 2px;
+    padding-left: 4px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"][readonly]::-webkit-outer-spin-button,
+input[type="number"][readonly]::-webkit-inner-spin-button {
+    -appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number][readonly] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* --------------------------------------------------------------------
+form-check-label
+* -------------------------------------------------------------------- */
+.form-check-label {
+    display: flex;
+    align-items: center;
+}
+
+/* --------------------------------------------------------------------
+form-check-input
+* -------------------------------------------------------------------- */
+.form-check-input {
+    border-color: #aaa;
+}
+
+/* --------------------------------------------------------------------
+form-group
+* -------------------------------------------------------------------- */
+.form-group { margin-bottom: 0.5rem;}
+
+/* --------------------------------------------------------------------
+input-group-text
+* -------------------------------------------------------------------- */
+.input-group-text {
+    font-size: inherit;
+    padding: .175rem .75rem;
+}
+
+/* --------------------------------------------------------------------
+label
+* -------------------------------------------------------------------- */
+label {
+    margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------
+label-clearfix
+* -------------------------------------------------------------------- */
+.label-clearfix::before {
+    display: block;
+    clear: both;
+    content: "\00a0";
+}
+
+@media(max-width: 1200px) {
+    .label-clearfix.last-xl::before { content: "";}
+}
+@media (max-width: 992px) {
+    .label-clearfix.last-lg::before { content: "";}
+}
+@media (max-width: 768px) {
+    .label-clearfix.last-md::before { content: "";}
+}
+@media (max-width: 576px) {
+    .label-clearfix.last-sm::before { content: "";}
+}
+
+/* --------------------------------------------------------------------
+list-group-item
+* -------------------------------------------------------------------- */
+.list-group-item label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.list-group-item label span {
+    margin-left: 5px;
+}
+
+/* --------------------------------------------------------------------
+custom-file
+* -------------------------------------------------------------------- */
+.custom-file { margin-bottom: 0;}
+.custom-file-input { margin: 0;}
+.custom-file-label { border-radius: 0.75rem 0.25rem 0.25rem 0.75rem;}
+
+/* --------------------------------------------------------------------
+wrapper-custom-file
+* -------------------------------------------------------------------- */
+.wrapper-custom-file {
+    position: relative;
+}
+.wrapper-custom-file .content-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper-custom-file .btns {
+    display: flex;
+    align-items: center;
+}
+
+/* --------------------------------------------------------------------
+readonly, disabled
+* -------------------------------------------------------------------- */
+.form-control:disabled,
+.form-control[readonly] {
+    cursor: not-allowed;
+    background-color: rgba(233, 236, 239, 0.4);
+}
+.form-control:focus:disabled,
+.form-control:focus[readonly] {
+    box-shadow: none;
+    border-color: var(--bs-border-color);
+    background-color: rgba(233, 236, 239, 0.4);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"][readonly]::-webkit-outer-spin-button,
+input[type="number"][readonly]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number][readonly] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* --------------------------------------------------------------------
+placeholder
+* -------------------------------------------------------------------- */
+:root{
+    --font-size-placeholder: 0.9rem;
+}
+::-webkit-input-placeholder { font-size: var(--font-size-placeholder);}
+:-ms-input-placeholder { font-size: var(--font-size-placeholder);}
+::-moz-placeholder { font-size: var(--font-size-placeholder);}
+:-moz-placeholder { font-size: var(--font-size-placeholder);}

@@ -1,0 +1,53 @@
+---
+import '@styles/card-principal.css'
+
+const cards = [
+    {
+        name: "Gente Gestão",
+        icon: "bi bi-person-fill-gear text-primary-yellow",
+        nameClassColor: "bg-primary-yellow",
+        link: "",
+    },
+    {
+        name: "Requisitos Legais",
+        icon: "bi bi-file-earmark-check text-primary-yellow",
+        nameClassColor: "bg-primary-yellow",
+        link: "",
+    },
+    {
+        name: "Operações",
+        icon: "bi bi-gear text-primary-yellow",
+        nameClassColor: "bg-primary-yellow",
+        link: "",
+    },
+    {
+        name: "Cozinha e Produção",
+        icon: "bi bi-shop-window text-primary-yellow",
+        nameClassColor: "bg-primary-yellow",
+        link: "",
+    },
+    {
+        name: "Armazem e Estoque",
+        icon: "bi bi-box text-primary-yellow",
+        nameClassColor: "bg-primary-yellow",
+        link: "",
+    }
+];
+---
+
+<div class="slide-in-blurred-bottom principal-cards">
+    {
+        cards.map(({ link, icon, name, nameClassColor }) => (
+            <div class="col-card">
+                <a class="link-card" href={link}>
+                    <figure>
+                        <div class="content-icon">
+                            <i class={icon}></i>
+                        </div>
+                    </figure>
+                    <h4 class={nameClassColor}>{name}</h4>
+                </a>
+            </div>
+        ))
+    }
+</div>

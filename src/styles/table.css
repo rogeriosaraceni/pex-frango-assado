@@ -1,0 +1,93 @@
+/* ////////////////////////////////////////////////////////////////////
+
+table>thead>tr>th / table>tfoot>tr>th
+table-fixed
+striped
+icon-tab
+dataTables-custom - dataTable / tbody
+dataTables-custom - no-footer / dataTables_scrollBody
+dataTables-custom - page-link
+
+//////////////////////////////////////////////////////////////////// */
+
+/* --------------------------------------------------------------------
+table>thead>tr>th / table>tfoot>tr>th
+-------------------------------------------------------------------- */
+.table>thead>tr>th,
+.table>tfoot>tr>th {
+    border-bottom-width: 1px;
+    font-weight: 400;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    color: #fff;
+    background-color: var(--color-purple-400);
+}
+
+.table>thead>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>th,
+.table>tbody>tr>td,
+.table>tfoot>tr>th,
+.table>tfoot>tr>td {
+    padding: 0.1rem 0.3rem;
+    vertical-align: middle;
+    border-color: #ddd;
+}
+
+/* --------------------------------------------------------------------
+table-fixed
+-------------------------------------------------------------------- */
+.table-fixed { table-layout: fixed;}
+
+/* --------------------------------------------------------------------
+striped
+-------------------------------------------------------------------- */
+tr.row-striped td {
+    background-color: #f9f9f9;
+}
+
+/* --------------------------------------------------------------------
+icon-tab
+-------------------------------------------------------------------- */
+.icon-tab:hover {
+    color: var(--color-orange-400);
+}
+
+/* --------------------------------------------------------------------
+dataTables-custom - dataTable / tbody
+-------------------------------------------------------------------- */
+/* corrigi bug barra de rolagem com bootstrap */
+table.dataTable,
+table.dataTable td,
+table.dataTable th {
+    box-sizing: border-box;
+}
+
+table.dataTable tbody tr {
+    background-color: transparent;
+}
+
+/* --------------------------------------------------------------------
+dataTables-custom - no-footer / dataTables_scrollBody
+-------------------------------------------------------------------- */
+.dataTable.no-footer,
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: none;
+}
+
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
+    -webkit-overflow-scrolling: auto !important;
+}
+
+/* --------------------------------------------------------------------
+dataTables-custom - page-link
+-------------------------------------------------------------------- */
+.dataTables_paginate .active>.page-link,
+.dataTables_paginate .page-link.active {
+    background-color: var(--color-orange-400);
+    border-color: var(--color-orange-400);
+}
+.dataTables_paginate .disabled>.page-link,
+.dataTables_paginate .page-link.disabled {
+    background-color: transparent;
+}

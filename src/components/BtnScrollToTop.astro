@@ -1,0 +1,27 @@
+<style>
+    .btnScrollToTop{
+        position: fixed;
+        right: 1rem;
+        bottom: 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transform:scale(1.8);
+        opacity: 0;
+        transition: .3s;
+    }
+</style>
+
+<span class="btnScrollToTop" data-scroll="top">
+    <i class="bi bi-arrow-up-circle"></i>
+</span>
+
+<script is:inline>
+    addEventListener("DOMContentLoaded", function () {
+        const btnScrollToTop = document.querySelector('[data-scroll="top"]')
+
+        window.onscroll = () => {
+            window.scrollY > 10 ? (btnScrollToTop.style.opacity = 1) : (btnScrollToTop.style.opacity = 0)
+        }
+        btnScrollToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" })
+    })
+</script>

@@ -1,0 +1,44 @@
+/* ////////////////////////////////////////////////////////////////////
+variables
+class text color
+class bg color
+
+//////////////////////////////////////////////////////////////////// */
+
+/* --------------------------------------------------------------------
+variables
+---------------------------------------------------------------------- */
+:root{
+    --color-primary-red:    #C72200;
+    --color-primary-yellow: #FFB000;
+
+    --color-complementary-grey:   #C7C7C7;
+    --color-complementary-yellow: #FCD69D;
+    --color-complementary-orange: #E68322;
+    --color-complementary-red:    #FF4014;
+    --color-complementary-brown:  #7C2529;
+}
+
+/* --------------------------------------------------------------------
+class text color
+---------------------------------------------------------------------- */
+.text-primary-red   { color: var(--color-primary-red);}
+.text-primary-yellow{ color: var(--color-primary-yellow);}
+
+.text-complementary-grey  { color: var(--color-complementary-grey);}
+.text-complementary-yellow{ color: var(--color-complementary-yellow);}
+.text-complementary-orange{ color: var(--color-complementary-orange);}
+.text-complementary-red   { color: var(--color-complementary-red);}
+.text-complementary-brown { color: var(--color-complementary-brown);}
+
+/* --------------------------------------------------------------------
+class bg color
+---------------------------------------------------------------------- */
+.bg-primary-red   { background-color: var(--color-primary-red);}
+.bg-primary-yellow{ background-color: var(--color-primary-yellow);}
+
+.bg-complementary-grey  { background-color: var(--color-complementary-grey);}
+.bg-complementary-yellow{ background-color: var(--color-complementary-yellow);}
+.bg-complementary-orange{ background-color: var(--color-complementary-orange);}
+.bg-complementary-red   { background-color: var(--color-complementary-red);}
+.bg-complementary-brown { background-color: var(--color-complementary-brown);}

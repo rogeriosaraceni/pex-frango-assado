@@ -1,0 +1,113 @@
+/* ////////////////////////////////////////////////////////////////////
+
+btn
+breadcrumb-app
+card
+dropdown-toggle-animation
+dropdown-menu-animation
+
+//////////////////////////////////////////////////////////////////// */
+
+/* --------------------------------------------------------------------
+btn
+---------------------------------------------------------------------- */
+.btn {
+    --bs-btn-padding-x: .75rem;
+    --bs-btn-padding-y: .215rem;
+}
+.btn-small{
+    padding: .105rem .45rem;
+}
+.btn-transparent{
+    border: none;
+    background-color: transparent;
+}
+.btn-clearfix {
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+@media(max-width: 1200px){ .btn-last-xl{ float: right;}}
+@media(max-width: 992px) { .btn-last-lg{ float: right;}}
+@media(max-width: 768px) { .btn-last-md{ float: right;}}
+@media(max-width: 576px) { .btn-last-sm{ float: right;}}
+
+/* --------------------------------------------------------------------
+breadcrumb-app
+---------------------------------------------------------------------- */
+.breadcrumb-app .card.card-body {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+.breadcrumb-app .card.card-body .breadcrumb{
+    margin: 0;
+    font-size: 0.8rem;
+}
+.breadcrumb-app .breadcrumb li,
+.breadcrumb-app .breadcrumb li a,
+.breadcrumb-app .breadcrumb-item+.breadcrumb-item::before{
+    color: #888;
+    font-size: 1rem;
+    letter-spacing: -.025rem;
+    text-decoration: none;
+}
+.breadcrumb-app .breadcrumb-item+.breadcrumb-item.active {
+    color: var(--bs-color)!important;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------------------
+card
+---------------------------------------------------------------------- */
+.card {
+    --bs-card-spacer-y: 0.5rem;
+    --bs-card-spacer-x: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border-color: #dee2e6 !important;
+    border: 0;
+    /* box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important; */
+    box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+}
+
+
+/* --------------------------------------------------------------------
+* - dropdown-toggle-animation
+* -------------------------------------------------------------------- */
+.dropdown-toggle.dropdown-toggle-animation::after {
+    border: none;
+    content: "\F282";
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    font-size: 0.75rem;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.3s;
+}
+.dropdown-toggle.dropdown-toggle-animation[data-bs-toggle="dropdown"][aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+/* --------------------------------------------------------------------
+* - dropdown-menu-animation
+* -------------------------------------------------------------------- */
+.dropdown-menu.dropdown-menu-animation {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    -webkit-transform: translateY(0.5rem);
+    transform: translateY(0.5rem);
+    opacity: 0;
+}
+.dropdown-menu.dropdown-menu-animation.show {
+    visibility: visible;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+}

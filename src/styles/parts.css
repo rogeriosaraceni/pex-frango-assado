@@ -1,0 +1,52 @@
+/* ////////////////////////////////////////////////////////////////////
+header-app
+nav-app
+
+//////////////////////////////////////////////////////////////////// */
+
+/* --------------------------------------------------------------------
+header-app
+---------------------------------------------------------------------- */
+.header-app{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+
+    background-color: var(--color-primary-yellow);
+}
+
+:root, [data-bs-theme=light] {
+    --bs-tertiary-color: #6c757d;
+}
+
+/* --------------------------------------------------------------------
+nav-app
+---------------------------------------------------------------------- */
+.nav-app{
+    background-color: #313a46;
+}
+
+@media (min-width: 992px){
+    .nav-app .navbar-nav .nav-item:first-child .nav-link  { padding-left: 0;}
+}
+
+
+.nav-app .nav-item  .nav-link.active,
+.nav-app .nav-item.active>a {
+    color: #ffffff;
+}
+
+.nav-app .nav-item .nav-link,
+.nav-app .nav-item>a {
+    color: #8391a2;
+}
+
+.nav-app .nav-item .nav-link:hover,
+.nav-app .nav-item>a:hover {
+    color: #bccee4;
+}

@@ -1,0 +1,17 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Header from '@includes/Header.astro';
+import CardsPrincipal from './CardsPrincipal.astro';
+---
+
+<Layout>
+    <header data-el="top-fixed" class="header-app navbar navbar-expand-xl">
+        <Header />
+    </header>
+
+    <main data-el="main-app" class="main-app">
+        <section class="container-fluid">
+            <CardsPrincipal />
+        </section>
+    </main>
+</Layout>
