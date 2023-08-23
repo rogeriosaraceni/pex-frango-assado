@@ -29,7 +29,7 @@ body{
     font-family: 'Livvic', sans-serif;
     transition: all 0.3s;
     overflow-x: hidden;
-    background-color: var(--bs-body-bg);
+    background-color: var(--app-body-bg);
 }
 .body-popup {
     padding: 1rem;

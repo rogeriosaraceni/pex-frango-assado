@@ -1,6 +1,6 @@
 [data-bs-theme=light] {
 
-    --bs-body-bg: #efefef;
+    --app-body-bg: #efefef;
 
     /* --bg-card-principal: #fff; */
 }
@@ -10,7 +10,7 @@
 
 [data-bs-theme=dark] {
 
-    --bs-body-bg: #212529;
+    --app-body-bg: #212529;
 
     /* --bg-card-principal: #333; */
 }

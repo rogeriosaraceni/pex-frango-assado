@@ -34,13 +34,9 @@ btn
 /* --------------------------------------------------------------------
 breadcrumb-app
 ---------------------------------------------------------------------- */
-.breadcrumb-app .card.card-body {
+.breadcrumb-app{
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-}
-.breadcrumb-app .card.card-body .breadcrumb{
-    margin: 0;
-    font-size: 0.8rem;
 }
 .breadcrumb-app .breadcrumb li,
 .breadcrumb-app .breadcrumb li a,
@@ -56,17 +52,15 @@ breadcrumb-app
 }
 
 /* --------------------------------------------------------------------
-card
+* - card
 ---------------------------------------------------------------------- */
 .card {
     --bs-card-spacer-y: 0.5rem;
     --bs-card-spacer-x: 0.5rem;
+}
+.card {
     margin-bottom: 1rem;
-    border-radius: 0.25rem;
-    border-color: #dee2e6 !important;
-    border: 0;
-    /* box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important; */
-    box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
 }
 
 

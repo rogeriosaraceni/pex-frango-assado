@@ -7,6 +7,7 @@
         "@layouts/*": ["src/layouts/*"],
         "@includes/*": ["src/includes/*"],
         "@components/*": ["src/components/*"],
+        "@componentsBS/*": ["src/components/Bootstrap/*"],
         "@assets/*": ["src/assets/*"],
         "@styles/*": ["src/styles/*"],
     }
