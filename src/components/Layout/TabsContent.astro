@@ -1,0 +1,19 @@
+---
+interface Props {
+    classActive?: string;
+    id: string;
+    ariaLabelledby: string;
+}
+
+const { classActive, id, ariaLabelledby } = Astro.props
+---
+
+<div
+    class=`tab-pane fade ${classActive}`
+    id={id}
+    aria-labelledby="tab-1"
+    role="tabpanel"
+    tabindex={ariaLabelledby}
+>
+    <slot />
+</div>

@@ -1,74 +1,114 @@
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-        <button
-            class="nav-link active"
-            id="tab-1"
-            data-bs-toggle="tab"
-            data-bs-target="#tab-1-pane"
-            type="button"
-            role="tab"
-            aria-controls="tab-1-pane"
-            aria-selected="true">Home</button
-        >
-    </li>
+---
+const tabs = [
+    {
+        name: "Gente Gestão",
+        classText: "nav-link active",
+        id: "tab-1",
+        dataBsTarget: "#tab-1-pane",
+        ariaControls: "tab-1-pane",
+        ariaSelected: true,
+    },
+    {
+        name: "Requisitos Legais",
+        classText: "nav-link",
+        id: "tab-2",
+        dataBsTarget: "#tab-2-pane",
+        ariaControls: "tab-2-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Operaçõs",
+        classText: "nav-link",
+        id: "tab-3",
+        dataBsTarget: "#tab-3-pane",
+        ariaControls: "tab-3-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Cozinha Produção",
+        classText: "nav-link",
+        id: "tab-4",
+        dataBsTarget: "#tab-4-pane",
+        ariaControls: "tab-4-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Armazem Estoque",
+        classText: "nav-link",
+        id: "tab-5",
+        dataBsTarget: "#tab-5-pane",
+        ariaControls: "tab-5-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Faturamento",
+        classText: "nav-link",
+        id: "tab-6",
+        dataBsTarget: "#tab-6-pane",
+        ariaControls: "tab-6-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Food Cost",
+        classText: "nav-link",
+        id: "tab-7",
+        dataBsTarget: "#tab-7-pane",
+        ariaControls: "tab-7-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Turnover",
+        classText: "nav-link",
+        id: "tab-8",
+        dataBsTarget: "#tab-8-pane",
+        ariaControls: "tab-8-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Margem Contribuiçao",
+        classText: "nav-link",
+        id: "tab-9",
+        dataBsTarget: "#tab-9-pane",
+        ariaControls: "tab-9-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Digital",
+        classText: "nav-link",
+        id: "tab-10",
+        dataBsTarget: "#tab-10-pane",
+        ariaControls: "tab-10-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Resumo",
+        classText: "nav-link",
+        id: "tab-11",
+        dataBsTarget: "#tab-11-pane",
+        ariaControls: "tab-11-pane",
+        ariaSelected: false,
+    },
+]
+---
 
-    <li class="nav-item" role="presentation">
-        <button
-            class="nav-link"
-            id="tab-2"
-            data-bs-toggle="tab"
-            data-bs-target="#tab-2-pane"
-            type="button"
-            role="tab"
-            aria-controls="tab-2-pane"
-            aria-selected="false">Profile</button
-        >
-    </li>
+<ul class="nav nav-tabs" role="tablist">
+    {
 
-    <li class="nav-item" role="presentation">
-        <button
-            class="nav-link"
-            id="tab-3"
-            data-bs-toggle="tab"
-            data-bs-target="#tab-3-pane"
-            type="button"
-            role="tab"
-            aria-controls="tab-3-pane"
-            aria-selected="false">Contact</button
-        >
-    </li>
+        tabs.map(({ name, id, dataBsTarget, ariaControls, ariaSelected, classText }) => (
+            <li class="nav-item" role="presentation">
+                <button
+                    class={classText}
+                    id={id}
+                    data-bs-toggle="tab"
+                    data-bs-target={dataBsTarget}
+                    type="button"
+                    role="tab"
+                    aria-controls={ariaControls}
+                    aria-selected={ariaSelected}
+                >
+                    {name}
+                </button>
+            </li>
+        ))
+    }
 </ul>
-
-<div class="tab-content" id="myTabContent">
-    <div
-        class="tab-pane fade show active"
-        id="tab-1-pane"
-        role="tabpanel"
-        aria-labelledby="tab-1"
-        tabindex="0"
-    >
-        ...
-    </div>
-
-    <div
-        class="tab-pane fade"
-        id="tab-2-pane"
-        role="tabpanel"
-        aria-labelledby="tab-2"
-        tabindex="0"
-    >
-        ...
-    </div>
-
-    <div
-        class="tab-pane fade"
-        id="tab-3-pane"
-        role="tabpanel"
-        aria-labelledby="tab-3"
-        tabindex="0"
-    >
-        ...
-    </div>
-
-
-</div>

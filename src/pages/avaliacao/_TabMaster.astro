@@ -1,0 +1,64 @@
+---
+import TabsContent from "@components/Layout/TabsContent.astro";
+import Tabs from "./_Tabs.astro";
+
+import Tab1 from "./_ContentTabs/Tab1.astro";
+import Tab2 from "./_ContentTabs/Tab2.astro";
+import Tab3 from "./_ContentTabs/Tab3.astro";
+import Tab4 from "./_ContentTabs/Tab4.astro";
+import Tab5 from "./_ContentTabs/Tab5.astro";
+import Tab6 from "./_ContentTabs/Tab6.astro";
+import Tab7 from "./_ContentTabs/Tab7.astro";
+import Tab8 from "./_ContentTabs/Tab8.astro";
+import Tab9 from "./_ContentTabs/Tab9.astro";
+import Tab10 from "./_ContentTabs/Tab10.astro";
+import Tab11 from "./_ContentTabs/Tab11.astro";
+---
+
+<Tabs />
+
+<div class="tab-content">
+    <TabsContent classActive="show active", id="tab-1-pane", ariaLabelledby="tab-1">
+        <Tab1 />
+    </TabsContent>
+
+    <TabsContent id="tab-2-pane", ariaLabelledby="tab-2">
+        <Tab2 />
+    </TabsContent>
+
+    <TabsContent id="tab-3-pane", ariaLabelledby="tab-2">
+        <Tab3 />
+    </TabsContent>
+
+    <TabsContent id="tab-4-pane", ariaLabelledby="tab-4">
+        <Tab4 />
+    </TabsContent>
+
+    <TabsContent id="tab-5-pane", ariaLabelledby="tab-5">
+        <Tab5 />
+    </TabsContent>
+
+    <TabsContent id="tab-6-pane", ariaLabelledby="tab-6">
+        <Tab6 />
+    </TabsContent>
+
+    <TabsContent id="tab-7-pane", ariaLabelledby="tab-7">
+        <Tab7 />
+    </TabsContent>
+
+    <TabsContent id="tab-8-pane", ariaLabelledby="tab-8">
+        <Tab8 />
+    </TabsContent>
+
+    <TabsContent id="tab-9-pane", ariaLabelledby="tab-9">
+        <Tab9 />
+    </TabsContent>
+
+    <TabsContent id="tab-10-pane", ariaLabelledby="tab-10">
+        <Tab10 />
+    </TabsContent>
+
+    <TabsContent id="tab-11-pane", ariaLabelledby="tab-11">
+        <Tab11 />
+    </TabsContent>
+</div>
