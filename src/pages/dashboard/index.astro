@@ -2,15 +2,27 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@includes/Header.astro';
 
-import CardCardBodySectionTitle from '@componentsLayout/CardCardBodySectionTitle.astro'
-import CardCardBody from '@componentsLayout/CardCardBody.astro'
-
-import SelectRegional from '@componentsForm/SelectRegional.astro'
-import SelectUnidade from '@components/Form/SelectUnidade.astro'
-import SelectMes from '@components/Form/SelectMes.astro'
-import BtnOk from '@components/Form/BtnOk.astro'
+import ContentSelecao from './_ContentSelecao.astro'
+import ContentChart1 from './_ContentChart1.astro';
+import ContentChart2 from './_ContentChart2.astro';
+import ContentChart3 from './_ContentChart3.astro';
 
 ---
+
+<style is:inline>
+    .box-chart {
+        width: 100%;
+    }
+
+    .title-chart{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+</style>
+
+<script is:inline src="/assets/vendor/amcharts4/core.js"></script>
+<script is:inline src="/assets/vendor/amcharts4/charts.js"></script>
+<script is:inline src="/assets/vendor/amcharts4/animated.js"></script>
 
 <Layout>
     <header data-el="top-fixed" class="header-app navbar navbar-expand-xl">
@@ -31,19 +43,21 @@ import BtnOk from '@components/Form/BtnOk.astro'
         </section>
 
         <section class="container-fluid">
-            <CardCardBodySectionTitle labelTitles = "Seleção">
-                <section class="row">
-                    <SelectRegional col="col-xl-2 col-lg-3 col-md-6 col-sm-12" />
-                    <SelectUnidade col="col-xl-3 col-lg-5 col-md-6 col-sm-12" />
-                    <SelectMes col="col-xl-2 col-lg-3 col-md-6 col-sm-6" />
-                    <BtnOk
-                        col="col-xl-2 col-lg-1 col-md-6 col-sm-6"
-                        last="sm"
-                        btnLast="lg"
-                    />
-                </section>
-            </CardCardBodySectionTitle>
+            <ContentSelecao />
 
+            <div class="row">
+                <div class="col-lg-12">
+                    <ContentChart1 />
+                </div>
+
+                <div class="col-lg-6">
+                    <ContentChart2 />
+                </div>
+
+                <div class="col-lg-6">
+                    <ContentChart3 />
+                </div>
+            </div>
 
         </section>
     </main>

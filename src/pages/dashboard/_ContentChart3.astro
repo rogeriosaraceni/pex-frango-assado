@@ -1,0 +1,87 @@
+---
+import CardCardBody from '@componentsLayout/CardCardBody.astro'
+---
+
+<CardCardBody>
+    <h5 class="title-chart">Chart 3</h5>
+    <div class="box-chart" id="chartdiv-chart3" style="height: 400px;"></div>
+</CardCardBody>
+
+<script is:inline>
+    am4core.ready(function() {
+
+        am4core.useTheme(am4themes_animated);
+
+        var chart = am4core.create("chartdiv-chart3", am4charts.PieChart);
+
+        // Disable amChart Logo
+        if(chart.logo){
+            chart.logo.disabled = true;
+        }
+
+        chart.data = [
+            {
+                "status": "Item 1",
+                "position": 60,
+                "color": "rgba(255, 176, 0, 0.6);"
+            },
+            {
+                "status": "Item 2",
+                "position": 20,
+                "color": "rgba(255, 176, 0, 0.7);"
+            },
+            {
+                "status": "Item 3",
+                "position": 10,
+                "color": "rgba(255, 176, 0, 0.8);"
+            },
+            {
+                "status": "Item 4",
+                "position": 10,
+                "color": "rgba(255, 176, 0, 1);"
+            },
+        ];
+
+        // Add and configure Series
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "position";
+        pieSeries.dataFields.category = "status";
+
+        pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.strokeWidth = 1;
+        pieSeries.slices.template.strokeOpacity = 1;
+        pieSeries.slices.template.propertyFields.fill = "color";
+        pieSeries.slices.template.propertyFields.stroke = "color";
+
+        //desabilita linha
+        pieSeries.ticks.template.disabled = true;
+
+        //pieSeries.labels.template.disabled = true;
+        pieSeries.alignLabels = false;
+        pieSeries.labels.template.fontSize = 12;
+        pieSeries.labels.template.text = "{value.percent.formatNumber('#')}%";
+        pieSeries.labels.template.radius = am4core.percent(-50);
+        pieSeries.labels.template.fill = am4core.color("#C72200");
+
+        // This creates initial animation
+        pieSeries.hiddenState.properties.opacity = 1;
+        pieSeries.hiddenState.properties.endAngle = -90;
+        pieSeries.hiddenState.properties.startAngle = -90;
+
+        chart.legend = new am4charts.Legend();
+        chart.legend.align = "center";
+        chart.legend.fontSize = 11;
+        chart.legend.valueLabels.template.align = "left"
+        chart.legend.valueLabels.template.textAlign = "left"
+        chart.legend.itemContainers.template.paddingTop = 2;
+        chart.legend.itemContainers.template.paddingBottom = 2;
+
+        // tamanho da legenda
+        var markerTemplate = chart.legend.markers.template;
+        markerTemplate.width = 10;
+        markerTemplate.height = 10;
+
+
+
+    })
+</script>

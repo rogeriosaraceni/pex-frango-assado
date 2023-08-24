@@ -1,0 +1,70 @@
+---
+import CardCardBody from '@componentsLayout/CardCardBody.astro'
+---
+
+<CardCardBody>
+    <h5 class="title-chart">Chart 2</h5>
+    <div class="box-chart" id="chartdiv-chart2" style="height: 400px;"></div>
+</CardCardBody>
+
+<script is:inline>
+    // Themes begin
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    var chart = am4core.create("chartdiv-chart2", am4charts.PieChart);
+
+    // Disable amChart Logo
+    if(chart.logo){
+        chart.logo.disabled = true;
+    }
+
+    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+    chart.data = [
+        {
+            country: "Item 1",
+            value: 401,
+            "color": "rgba(199, 34, 0, 0.7);"
+        },
+        {
+            country: "Item 2",
+            value: 300,
+            "color": "rgba(199, 34, 0, 0.6);"
+        },
+        {
+            country: "Item 3",
+            value: 200,
+            "color": "rgba(199, 34, 0, 0.5);"
+        },
+        {
+            country: "Item 4",
+            value: 165,
+            "color": "rgba(199, 34, 0, 0.4);"
+        }
+    ];
+    chart.radius = am4core.percent(70);
+    chart.innerRadius = am4core.percent(40);
+    chart.startAngle = 180;
+    chart.endAngle = 360;
+
+    var series = chart.series.push(new am4charts.PieSeries());
+    series.dataFields.value = "value";
+    series.dataFields.category = "country";
+
+    series.slices.template.cornerRadius = 10;
+    series.slices.template.innerCornerRadius = 7;
+    series.slices.template.draggable = true;
+    series.slices.template.inert = true;
+    series.alignLabels = false;
+
+    series.slices.template.propertyFields.fill = "color";
+    series.slices.template.propertyFields.stroke = "color";
+
+    series.hiddenState.properties.startAngle = 90;
+    series.hiddenState.properties.endAngle = 90;
+
+    chart.legend = new am4charts.Legend();
+
+</script>
+
