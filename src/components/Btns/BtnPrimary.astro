@@ -1,0 +1,11 @@
+---
+interface Props {
+    type: string;
+    name: string;
+    classAdd?: string;
+}
+
+const { type, name, classAdd } = Astro.props;
+---
+
+<button type={type} class=`btn btn-primary ${classAdd}`>{name}</button>

@@ -77,6 +77,8 @@ label-clearfix
     display: block;
     clear: both;
     content: "\00a0";
+
+    margin-top: 0.2rem;
 }
 
 @media(max-width: 1200px) {

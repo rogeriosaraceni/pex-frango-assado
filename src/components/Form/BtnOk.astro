@@ -1,0 +1,14 @@
+---
+interface Props {
+    col?: string;
+    last?: string;
+    btnLast?: string;
+}
+
+const { col, last, btnLast } = Astro.props;
+---
+
+<div class={col}>
+    <div class=`label-clearfix last-${last}`></div>
+    <button type="submit" class=`btn btn-primary btn-last-${btnLast}`>Ok</button>
+</div>
