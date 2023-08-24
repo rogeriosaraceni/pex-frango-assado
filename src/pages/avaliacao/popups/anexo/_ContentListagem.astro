@@ -1,0 +1,31 @@
+---
+import CardCardBodySectionTitle from '@componentsLayout/CardCardBodySectionTitle.astro'
+---
+
+<CardCardBodySectionTitle labelTitles = "Documentos Anexados">
+    <div class="table-responsive">
+        <table class="table text-center table-fixed table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 150px;">Nome do Arquivo</th>
+                    <th style="width: 150px;">Usuário</th>
+                    <th style="width: 100px;">Data</th>
+                    <th style="width: 060px;">Del</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-center">
+                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Del" data-row="delete" href="#">
+                            <i class="bi bi-trash fs-5 icon-tab"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</CardCardBodySectionTitle>
