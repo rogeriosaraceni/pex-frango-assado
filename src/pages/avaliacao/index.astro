@@ -2,17 +2,10 @@
 import Layout from '@layouts/Layout.astro'
 import Header from '@includes/Header.astro'
 
-import CardCardBodySectionTitle from '@componentsLayout/CardCardBodySectionTitle.astro'
-import CardCardBody from '@componentsLayout/CardCardBody.astro'
-
-import SelectRegional from '@componentsForm/SelectRegional.astro'
-import SelectUnidade from '@components/Form/SelectUnidade.astro'
-import SelectMes from '@components/Form/SelectMes.astro'
-import BtnOk from '@components/Form/BtnOk.astro'
-
-import BtnPrimary from '@componentsBtns/BtnPrimary.astro'
-
-import TabMaster from './_TabMaster.astro'
+import ContentSelecao from './_ContentSelecao.astro'
+import ContentBtns from './_ContentBtns.astro'
+import ContentTabs from './_ContentTabs.astro'
+import ContentBtnsForm from './_ContentBtnsForm.astro'
 ---
 
 <Layout>
@@ -35,30 +28,13 @@ import TabMaster from './_TabMaster.astro'
 
         <section class="container-fluid">
 
-            <CardCardBodySectionTitle labelTitles = "Seleção">
-                <section class="row">
-                    <SelectRegional col="col-xl-2 col-lg-3 col-md-6 col-sm-12" />
-                    <SelectUnidade col="col-xl-3 col-lg-5 col-md-6 col-sm-12" />
-                    <SelectMes col="col-xl-2 col-lg-3 col-md-6 col-sm-6" />
-                    <BtnOk
-                        col="col-xl-2 col-lg-1 col-md-6 col-sm-6"
-                        last="sm"
-                        btnLast="lg"
-                    />
-                </section>
-            </CardCardBodySectionTitle>
+            <ContentSelecao />
+            <ContentBtns />
 
-            <CardCardBody>
-
-            </CardCardBody>
-
-            <CardCardBody>
-                <TabMaster />
-            </CardCardBody>
-
-            <CardCardBody>
-                <BtnPrimary type="submit" name="Salvar Avaliação" classAdd="float-end"/>
-            </CardCardBody>
+            <form action="" method="post">
+                <ContentTabs />
+                <ContentBtnsForm />
+            </form>
         </section>
     </main>
 </Layout>

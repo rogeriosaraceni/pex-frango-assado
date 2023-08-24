@@ -13,6 +13,7 @@ section-title
 @import 'bootstrap-custom.css';
 @import 'parts.css';
 @import 'form.css';
+@import 'table.css';
 @import 'pages.css';
 
 
@@ -26,7 +27,9 @@ html, body{
 body{
     display: flex;
     flex-direction: column;
-    font-family: 'Livvic', sans-serif;
+    /* font-family: 'Livvic', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
     transition: all 0.3s;
     overflow-x: hidden;
     background-color: var(--app-body-bg);

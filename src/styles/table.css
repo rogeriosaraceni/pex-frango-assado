@@ -20,7 +20,7 @@ table>thead>tr>th / table>tfoot>tr>th
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     color: #fff;
-    background-color: var(--color-purple-400);
+    background-color: var(--color-primary-yellow);
 }
 
 .table>thead>tr>th,
@@ -31,7 +31,7 @@ table>thead>tr>th / table>tfoot>tr>th
 .table>tfoot>tr>td {
     padding: 0.1rem 0.3rem;
     vertical-align: middle;
-    border-color: #ddd;
+    border-color: var(--bs-border-color);
 }
 
 /* --------------------------------------------------------------------
@@ -50,7 +50,7 @@ tr.row-striped td {
 icon-tab
 -------------------------------------------------------------------- */
 .icon-tab:hover {
-    color: var(--color-orange-400);
+    color: var(--color-primary-yellow);
 }
 
 /* --------------------------------------------------------------------
@@ -84,8 +84,8 @@ dataTables-custom - page-link
 -------------------------------------------------------------------- */
 .dataTables_paginate .active>.page-link,
 .dataTables_paginate .page-link.active {
-    background-color: var(--color-orange-400);
-    border-color: var(--color-orange-400);
+    background-color: var(--color-primary-yellow);
+    border-color: var(--color-primary-yellow);
 }
 .dataTables_paginate .disabled>.page-link,
 .dataTables_paginate .page-link.disabled {

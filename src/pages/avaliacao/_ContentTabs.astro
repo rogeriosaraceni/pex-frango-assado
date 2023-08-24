@@ -1,0 +1,178 @@
+---
+import CardCardBody from '@componentsLayout/CardCardBody.astro'
+import TabsContent from "@components/Layout/TabsContent.astro";
+
+import Tab1 from "./_Tabs/Tab1.astro";
+import Tab2 from "./_Tabs/Tab2.astro";
+import Tab3 from "./_Tabs/Tab3.astro";
+import Tab4 from "./_Tabs/Tab4.astro";
+import Tab5 from "./_Tabs/Tab5.astro";
+import Tab6 from "./_Tabs/Tab6.astro";
+import Tab7 from "./_Tabs/Tab7.astro";
+import Tab8 from "./_Tabs/Tab8.astro";
+import Tab9 from "./_Tabs/Tab9.astro";
+import Tab10 from "./_Tabs/Tab10.astro";
+import Tab11 from "./_Tabs/Tab11.astro";
+
+
+const tabs = [
+    {
+        name: "Gente Gestão",
+        classText: "nav-link active",
+        id: "tab-1",
+        dataBsTarget: "#tab-1-pane",
+        ariaControls: "tab-1-pane",
+        ariaSelected: true,
+    },
+    {
+        name: "Requisitos Legais",
+        classText: "nav-link",
+        id: "tab-2",
+        dataBsTarget: "#tab-2-pane",
+        ariaControls: "tab-2-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Operaçõs",
+        classText: "nav-link",
+        id: "tab-3",
+        dataBsTarget: "#tab-3-pane",
+        ariaControls: "tab-3-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Cozinha Produção",
+        classText: "nav-link",
+        id: "tab-4",
+        dataBsTarget: "#tab-4-pane",
+        ariaControls: "tab-4-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Armazem Estoque",
+        classText: "nav-link",
+        id: "tab-5",
+        dataBsTarget: "#tab-5-pane",
+        ariaControls: "tab-5-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Faturamento",
+        classText: "nav-link",
+        id: "tab-6",
+        dataBsTarget: "#tab-6-pane",
+        ariaControls: "tab-6-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Food Cost",
+        classText: "nav-link",
+        id: "tab-7",
+        dataBsTarget: "#tab-7-pane",
+        ariaControls: "tab-7-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Turnover",
+        classText: "nav-link",
+        id: "tab-8",
+        dataBsTarget: "#tab-8-pane",
+        ariaControls: "tab-8-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Margem Contribuiçao",
+        classText: "nav-link",
+        id: "tab-9",
+        dataBsTarget: "#tab-9-pane",
+        ariaControls: "tab-9-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Digital",
+        classText: "nav-link",
+        id: "tab-10",
+        dataBsTarget: "#tab-10-pane",
+        ariaControls: "tab-10-pane",
+        ariaSelected: false,
+    },
+    {
+        name: "Resumo",
+        classText: "nav-link",
+        id: "tab-11",
+        dataBsTarget: "#tab-11-pane",
+        ariaControls: "tab-11-pane",
+        ariaSelected: false,
+    },
+]
+---
+
+<CardCardBody>
+    <ul class="nav nav-tabs" role="tablist">
+        {
+
+            tabs.map(({ name, id, dataBsTarget, ariaControls, ariaSelected, classText }) => (
+                <li class="nav-item" role="presentation">
+                    <button
+                        class={classText}
+                        id={id}
+                        data-bs-toggle="tab"
+                        data-bs-target={dataBsTarget}
+                        type="button"
+                        role="tab"
+                        aria-controls={ariaControls}
+                        aria-selected={ariaSelected}
+                    >
+                        {name}
+                    </button>
+                </li>
+            ))
+        }
+    </ul>
+
+    <div class="tab-content">
+        <TabsContent classActive="show active", id="tab-1-pane", ariaLabelledby="tab-1">
+            <Tab1 />
+        </TabsContent>
+
+        <TabsContent id="tab-2-pane", ariaLabelledby="tab-2">
+            <Tab2 />
+        </TabsContent>
+
+        <TabsContent id="tab-3-pane", ariaLabelledby="tab-2">
+            <Tab3 />
+        </TabsContent>
+
+        <TabsContent id="tab-4-pane", ariaLabelledby="tab-4">
+            <Tab4 />
+        </TabsContent>
+
+        <TabsContent id="tab-5-pane", ariaLabelledby="tab-5">
+            <Tab5 />
+        </TabsContent>
+
+        <TabsContent id="tab-6-pane", ariaLabelledby="tab-6">
+            <Tab6 />
+        </TabsContent>
+
+        <TabsContent id="tab-7-pane", ariaLabelledby="tab-7">
+            <Tab7 />
+        </TabsContent>
+
+        <TabsContent id="tab-8-pane", ariaLabelledby="tab-8">
+            <Tab8 />
+        </TabsContent>
+
+        <TabsContent id="tab-9-pane", ariaLabelledby="tab-9">
+            <Tab9 />
+        </TabsContent>
+
+        <TabsContent id="tab-10-pane", ariaLabelledby="tab-10">
+            <Tab10 />
+        </TabsContent>
+
+        <TabsContent id="tab-11-pane", ariaLabelledby="tab-11">
+            <Tab11 />
+        </TabsContent>
+    </div>
+</CardCardBody>
