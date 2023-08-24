@@ -5,6 +5,7 @@ breadcrumb-app
 card
 dropdown-toggle-animation
 dropdown-menu-animation
+nav-fill
 
 //////////////////////////////////////////////////////////////////// */
 
@@ -135,4 +136,21 @@ breadcrumb-app
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
     opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------
+* - nav-tabs
+---------------------------------------------------------------------- */
+.nav-tabs .nav-link{
+    color: #999;
+    transition: all 0.3s;
+}
+.nav-tabs .nav-link:hover{
+    color: #333;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link.active:hover{
+    color: #111;
+    background-color: var(--color-primary-yellow);
 }

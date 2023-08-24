@@ -35,6 +35,11 @@ input[type=number][readonly] {
     -moz-appearance: textfield;
 }
 
+.form-control,
+.form-select {
+    font-size: 0.9rem;
+}
+
 /* --------------------------------------------------------------------
 form-check-label
 * -------------------------------------------------------------------- */
