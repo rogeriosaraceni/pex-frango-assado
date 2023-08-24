@@ -1,0 +1,136 @@
+---
+interface Props {
+    col?: string;
+}
+
+const { col } = Astro.props;
+
+const valuesSelect = [
+
+    //A CONTRATAR
+    {
+        value: "",
+        name: "Restaurante Guará",
+    },
+    {
+        value: "",
+        name: "Restaurante Cravinhos",
+    },
+    {
+        value: "",
+        name: "Restaurante Cesário Lange",
+    },
+    {
+        value: "",
+        name: "Restaurante Itu",
+    },
+    {
+        value: "",
+        name: "Restaurante Castelo Branco",
+    },
+
+
+    //GODOY
+    {
+        value: "",
+        name: "Restaurante Carvalho Pinto",
+    },
+    {
+        value: "",
+        name: "Restaurante Aparecida",
+    },
+    {
+        value: "",
+        name: "Restaurante Roseira",
+    },
+    {
+        value: "",
+        name: "Restaurante Taubaté",
+    },
+    {
+        value: "",
+        name: "Restaurante Jacareí",
+    },
+
+
+    //JANAINA
+    {
+        value: "",
+        name: "Restaurante Cubatão",
+    },
+    {
+        value: "",
+        name: "Restaurante Caieiras",
+    },
+    {
+        value: "",
+        name: "Restaurante Cajamar",
+    },
+    {
+        value: "",
+        name: "Restaurante Diadema",
+    },
+
+
+    //PEDRO
+    {
+        value: "",
+        name: "Restaurante Mogi Guaçu",
+    },
+    {
+        value: "",
+        name: "Restaurante Trevo Campinas",
+    },
+    {
+        value: "",
+        name: "Restaurante Jaguariúna",
+    },
+    {
+        value: "",
+        name: "Restaurante Louveira",
+    },
+    {
+        value: "",
+        name: "Restaurante Campinas",
+    },
+    {
+        value: "",
+        name: "Restaurante Itupeva",
+    },
+
+
+    //RICARDO
+    {
+        value: "",
+        name: "Restaurante Atib.66 (Espelho)",
+    },
+    {
+        value: "",
+        name: "Restaurante Dom Pedro 66",
+    },
+    {
+        value: "",
+        name: "Restaurante Cambuí",
+    },
+    {
+        value: "",
+        name: "Restaurante Fernão Dias",
+    },
+    {
+        value: "",
+        name: "Restaurante Atibaia",
+    },
+];
+---
+
+<label class={col}>Unidade:
+    <select name="redional" id="" class="form-select" required>
+        <option value=""></option>
+        {
+            valuesSelect.map(({ value, name }) => (
+                <option value={value}>{name}</option>
+            ))
+        }
+    </select>
+</label>
+

@@ -2,7 +2,11 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@includes/Header.astro';
 
-import CardCardBody from '@componentsBS/CardCardBody.astro';
+import CardCardBodySectionTitle from '@componentsLayout/CardCardBodySectionTitle.astro';
+
+import SelectRegional from '@componentsForm/SelectRegional.astro';
+import SelectUnidade from '@components/Form/SelectUnidade.astro';
+import SelectMes from '@components/Form/SelectMes.astro';
 ---
 
 <Layout>
@@ -24,9 +28,14 @@ import CardCardBody from '@componentsBS/CardCardBody.astro';
         </section>
 
         <section class="container-fluid">
-            <CardCardBody>
 
-            </CardCardBody>
+            <CardCardBodySectionTitle labelTitles = "Cadastro">
+                <section class="row">
+                    <SelectRegional col="col-xl-2 col-lg-2 col-md-6 col-sm-6" />
+                    <SelectUnidade col="col-xl-2 col-lg-2 col-md-6 col-sm-6" />
+                    <SelectMes col="col-xl-2 col-lg-2 col-md-6 col-sm-6" />
+                </section>
+            </CardCardBodySectionTitle>
 
         </section>
     </main>

@@ -1,0 +1,10 @@
+---
+interface Props {
+    labelTitles: string
+}
+
+const { labelTitles } = Astro.props;
+---
+<div class="section-title">
+    <span class="title">{labelTitles}</span>
+</div>
