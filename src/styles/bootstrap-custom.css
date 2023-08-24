@@ -151,6 +151,6 @@ breadcrumb-app
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link.active:hover{
-    color: #111;
+    color:  var(--color-primary-red);
     background-color: var(--color-primary-yellow);
 }
