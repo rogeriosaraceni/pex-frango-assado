@@ -106,7 +106,7 @@ section-title
 }
 
 .section-title .title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--bs-color);
 }
 
@@ -117,7 +117,7 @@ section-title
     bottom: -2px;
     width: 50px;
     height: 0;
-    border-top: 2px solid var(--bs-border-color);
+    border-top: 2px solid var(--color-primary-red);
     transition: height 0.3s, bottom, top ease 0s;
     z-index: 0
 }
