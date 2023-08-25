@@ -1,4 +1,181 @@
 ---
+import BtnAnexo from '../_components/BtnAnexo.astro'
+import ListPontuacao from '../_components/ListPontuacao.astro'
+import SelectPontos from '../_components/SelectPontos.astro'
+
+const rows5s = [
+    {
+        item: "1 Conscientização de 5S - A loja atende ao programa de 5 S na sua totalidade",
+        descricao: "O Check list do 5S está devidamente preenchido",
+        peso: "5,0%",
+        pontos: "5",
+    },
+    {
+        item: "2 Melhoria dos resultados de 5S - A evolução pode ser percebida e isso está gerando o reconhecimento periódico dos melhores resultados.",
+        descricao: "Frequencia de auditorias estão sendo realizadasVerificar como o reconhecimento é realizado. Bate papo com o Time para verificação de conhecimento da ferramenta",
+        peso: "4,0%",
+        pontos: "4",
+    }
+]
+
+
+const rowsGente = [
+    {
+        item: "3 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "4 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "5 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "6 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "7 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "8 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "9 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "10 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "11 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "12 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "13 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "14 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "15 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "16 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "17 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "18 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "19 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+]
+
+
+const rowsGestao = [
+    {
+        item: "20 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "21 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "22 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "23 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+]
+
+
+const rowsArea = [
+    {
+        item: "24 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "25 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+    {
+        item: "26 ",
+        descricao: "",
+        peso: "%",
+        pontos: "",
+    },
+]
+
+
+
 ---
 
 <style>
@@ -26,52 +203,151 @@
                 <td>9</td>
                 <td></td>
             </tr>
+            {
+                rows5s.map(({ item, descricao, peso, pontos }) => (
+                    <tr>
+                        <td class="text-start">
+                            <div class="d-flex align-items-baseline justify-content-between gap-1">
+                                <div>{item}</div>
 
-            <tr>
-                <td>
-                    <div class="d-flex align-items-center gap-1">
-                        1 Conscientização de 5S - A loja atende ao programa de 5 S na sua totalidade
+                                <div data-bs-toggle="tooltip" data-bs-title={descricao}>
+                                    <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                </div>
+                            </div>
+                        </td>
 
-                        <div data-bs-toggle="tooltip" data-bs-title="O Check list do 5S está devidamente preenchido">
-                            <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
-                        </div>
-                    </div>
+                        <td>
+                            <BtnAnexo />
+                        </td>
 
-                </td>
+                        <td>
+                            <ListPontuacao />
+                        </td>
 
-                <td>
-                    <a
-                        class="text-primary"
-                        data-fancybox
-                        data-type="iframe"
-                        data-width="900"
-                        data-height="600"
-                        data-bs-toggle="tooltip"
-                        data-bs-title="Anexar Arquivos"
-                        href="./popups/anexo/">
-                        <i class="bi bi-paperclip icon-tab fs-4"></i>
-                    </a>
-                </td>
+                        <td>{peso}</td>
+                        <td>{pontos}</td>
 
-                <td>
-                    <ul class="list-unstyled mb-0">
-                        <li>3. A Operação está garantindo 100% do item.</li>
-                        <li>1. A Operação está garantindo parcialmente o item.</li>
-                        <li>0. A Operação NÃO garante o item.</li>
-                    </ul>
-                </td>
-                <td>5,0%</td>
-                <td>5</td>
+                        <td>
+                            <SelectPontos />
+                        </td>
+                    </tr>
+                ))
+            }
 
-                <td>
-                    <select name="" class="form-select text-center">
-                        <option value=""></option>
-                        <option value="3">3</option>
-                        <option value="1">1</option>
-                        <option value="0">0</option>
-                    </select>
-                </td>
+
+            <tr class="aval-line-sub">
+                <td colspan="3" class="text-start">Gente</td>
+                <td>66%</td>
+                <td>66</td>
+                <td></td>
             </tr>
+            {
+                rowsGente.map(({ item, descricao, peso, pontos }) => (
+                    <tr>
+                        <td class="text-start">
+                            <div class="d-flex align-items-baseline justify-content-between gap-1">
+                                <div>{item}</div>
+
+                                <div data-bs-toggle="tooltip" data-bs-title={descricao}>
+                                    <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <BtnAnexo />
+                        </td>
+
+                        <td>
+                            <ListPontuacao />
+                        </td>
+
+                        <td>{peso}</td>
+                        <td>{pontos}</td>
+
+                        <td>
+                            <SelectPontos />
+                        </td>
+                    </tr>
+                ))
+            }
+
+
+            <tr class="aval-line-sub">
+                <td colspan="3" class="text-start">Gestão</td>
+                <td>16%</td>
+                <td>16</td>
+                <td></td>
+            </tr>
+            {
+                rowsGestao.map(({ item, descricao, peso, pontos }) => (
+                    <tr>
+                        <td class="text-start">
+                            <div class="d-flex align-items-baseline justify-content-between gap-1">
+                                <div>{item}</div>
+
+                                <div data-bs-toggle="tooltip" data-bs-title={descricao}>
+                                    <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <BtnAnexo />
+                        </td>
+
+                        <td>
+                            <ListPontuacao />
+                        </td>
+
+                        <td>{peso}</td>
+                        <td>{pontos}</td>
+
+                        <td>
+                            <SelectPontos />
+                        </td>
+                    </tr>
+                ))
+            }
+
+
+            <tr class="aval-line-sub">
+                <td colspan="3" class="text-start">Área Interna / Vestiários</td>
+                <td>9%</td>
+                <td>9</td>
+                <td></td>
+            </tr>
+            {
+                rowsGestao.map(({ item, descricao, peso, pontos }) => (
+                    <tr>
+                        <td class="text-start">
+                            <div class="d-flex align-items-baseline justify-content-between gap-1">
+                                <div>{item}</div>
+
+                                <div data-bs-toggle="tooltip" data-bs-title={descricao}>
+                                    <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <BtnAnexo />
+                        </td>
+
+                        <td>
+                            <ListPontuacao />
+                        </td>
+
+                        <td>{peso}</td>
+                        <td>{pontos}</td>
+
+                        <td>
+                            <SelectPontos />
+                        </td>
+                    </tr>
+                ))
+            }
         </tbody>
     </table>
 </div>
+
