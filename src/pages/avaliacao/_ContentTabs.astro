@@ -107,28 +107,48 @@ const tabs = [
 ]
 ---
 
-<CardCardBody>
-    <ul class="nav nav-tabs" role="tablist">
-        {
+<!-- Pontuação
 
-            tabs.map(({ name, id, dataBsTarget, ariaControls, ariaSelected, classText }) => (
-                <li class="nav-item" role="presentation">
-                    <button
-                        class={classText}
-                        id={id}
-                        data-bs-toggle="tab"
-                        data-bs-target={dataBsTarget}
-                        type="button"
-                        role="tab"
-                        aria-controls={ariaControls}
-                        aria-selected={ariaSelected}
-                    >
-                        {name}
-                    </button>
-                </li>
-            ))
-        }
-    </ul>
+3. A Operação está garantindo 100% do item.
+1. A Operação está garantindo parcialmente o item.
+0. A Operação NÃO garante o item. -->
+
+<CardCardBody>
+    <div class="d-flex">
+        <div class="flex-grow-1">
+            <ul class="nav nav-tabs" role="tablist">
+                {
+
+                    tabs.map(({ name, id, dataBsTarget, ariaControls, ariaSelected, classText }) => (
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class={classText}
+                                id={id}
+                                data-bs-toggle="tab"
+                                data-bs-target={dataBsTarget}
+                                type="button"
+                                role="tab"
+                                aria-controls={ariaControls}
+                                aria-selected={ariaSelected}
+                            >
+                                {name}
+                            </button>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+
+        <div class="d-flex align-items-end">
+            <div
+                class="btn btn-light p-1 border rounded-0 rounded-top"
+                data-bs-toggle="tooltip-aval"
+                data-bs-title="3. A Operação está garantindo 100% do item. 1.<br>A Operação está garantindo parcialmente o item. 0.<br>A Operação NÃO garante o item."
+            >
+                <i class="bi bi-info-circle-fill text-secondary"></i> Pontuação
+            </div>
+        </div>
+    </div>
 
     <div class="tab-content">
         <TabsContent classActive="show active", id="tab-1-pane", ariaLabelledby="tab-1">

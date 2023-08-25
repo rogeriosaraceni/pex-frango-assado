@@ -1,6 +1,5 @@
 ---
 import BtnAnexo from '../_components/BtnAnexo.astro'
-import ListPontuacao from '../_components/ListPontuacao.astro'
 import SelectPontos from '../_components/SelectPontos.astro'
 
 const rows5s = [
@@ -200,9 +199,8 @@ const rowsArea = [
 <div class="table-responsive" style="max-height: 500px">
     <table class="table table-bordered table-fixed small text-center fixThead">
         <thead>
-            <th style="width: 300px">Item</th>
+            <th style="width: 500px">Item</th>
             <th style="width: 070px">Anexo</th>
-            <th style="width: 250px">Pontuação</th>
             <th style="width: 070px">Peso</th>
             <th style="width: 070px">Pontos</th>
             <th style="width: 110px">Pontos Alcançado</th>
@@ -210,7 +208,7 @@ const rowsArea = [
 
         <tbody>
             <tr class="aval-line-sub">
-                <td colspan="3" class="text-start">5 S</td>
+                <td colspan="2" class="text-start">5 S</td>
                 <td>9,0%</td>
                 <td>9</td>
                 <td></td>
@@ -232,10 +230,6 @@ const rowsArea = [
                             <BtnAnexo />
                         </td>
 
-                        <td>
-                            <ListPontuacao />
-                        </td>
-
                         <td>{peso}</td>
                         <td>{pontos}</td>
 
@@ -248,7 +242,7 @@ const rowsArea = [
 
 
             <tr class="aval-line-sub">
-                <td colspan="3" class="text-start">Gente</td>
+                <td colspan="2" class="text-start">Gente</td>
                 <td>66%</td>
                 <td>66</td>
                 <td></td>
@@ -270,10 +264,6 @@ const rowsArea = [
                             <BtnAnexo />
                         </td>
 
-                        <td>
-                            <ListPontuacao />
-                        </td>
-
                         <td>{peso}</td>
                         <td>{pontos}</td>
 
@@ -286,7 +276,7 @@ const rowsArea = [
 
 
             <tr class="aval-line-sub">
-                <td colspan="3" class="text-start">Gestão</td>
+                <td colspan="2" class="text-start">Gestão</td>
                 <td>16%</td>
                 <td>16</td>
                 <td></td>
@@ -308,10 +298,6 @@ const rowsArea = [
                             <BtnAnexo />
                         </td>
 
-                        <td>
-                            <ListPontuacao />
-                        </td>
-
                         <td>{peso}</td>
                         <td>{pontos}</td>
 
@@ -324,7 +310,7 @@ const rowsArea = [
 
 
             <tr class="aval-line-sub">
-                <td colspan="3" class="text-start">Área Interna / Vestiários</td>
+                <td colspan="2" class="text-start">Área Interna / Vestiários</td>
                 <td>9%</td>
                 <td>9</td>
                 <td></td>
@@ -344,10 +330,6 @@ const rowsArea = [
 
                         <td>
                             <BtnAnexo />
-                        </td>
-
-                        <td>
-                            <ListPontuacao />
                         </td>
 
                         <td>{peso}</td>
