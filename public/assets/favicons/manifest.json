@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "PEX Frango Assado",
+    "short_name": "PEX",
 
     "icons": [
         {
@@ -15,7 +15,7 @@
         }
     ],
     "start_url": "/",
-    "theme_color": "#fff",
+    "theme_color": "#ffb000",
     "background_color": "#fff",
     "display": "standalone"
 }
