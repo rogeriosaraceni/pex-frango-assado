@@ -178,12 +178,22 @@ const rowsArea = [
 <style is:inline>
     .aval-line-sub td{
         font-weight: bold;
-        background-color: #eee;
     }
-
     .tooltip-aval{
         max-width: 400px;
         text-align: left;
+    }
+
+    [data-bs-theme=light] {
+        .aval-line-sub td{
+            background-color: #eee;
+        }
+    }
+
+    [data-bs-theme=dark] {
+        .aval-line-sub td{
+            background-color: #111;
+        }
     }
 </style>
 
