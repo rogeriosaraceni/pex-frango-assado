@@ -12,7 +12,7 @@ const rows5s = [
     },
     {
         item: "2 Melhoria dos resultados de 5S - A evolução pode ser percebida e isso está gerando o reconhecimento periódico dos melhores resultados.",
-        descricao: "Frequencia de auditorias estão sendo realizadasVerificar como o reconhecimento é realizado. Bate papo com o Time para verificação de conhecimento da ferramenta",
+        descricao: "Frequencia de auditorias estão sendo realizadas Verificar como o reconhecimento é realizado. <br> Bate papo com o Time para verificação de conhecimento da ferramenta",
         peso: "4,0%",
         pontos: "4",
     }
@@ -28,19 +28,19 @@ const rowsGente = [
     },
     {
         item: "4 Os Fardamentos e EPI´s estão disponíveis para uso e em bom estado de conservação.",
-        descricao: "Loja apresenta controle de Fardamento de EPIs para todos os funcionários? Loja tem ficha de EPI e fardamento para todo o Time?",
+        descricao: "Loja apresenta controle de Fardamento de EPIs para todos os funcionários? <br> Loja tem ficha de EPI e fardamento para todo o Time?",
         peso: "3,0%",
         pontos: "3",
     },
     {
         item: "5 Ausência de adornos, esmalte, unhas compridas, perfume e barba.",
-        descricao: "Garantir que não haja nenhum funcionário com a utilização dos itens citados garantindo a padronização de atendimento prevista nas regras de qualidade. Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
+        descricao: "Garantir que não haja nenhum funcionário com a utilização dos itens citados garantindo a padronização de atendimento prevista nas regras de qualidade. <br> Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
         peso: "4,0%",
         pontos: "4",
     },
     {
         item: "6 Itens pessoais mantidos fora das áreas de producao e distribuição estão armazenamento adequadamente, colaboradores não bebem, comem ou mascam chiclete dentro da loja.",
-        descricao: "Garantir que não haja nenhum item pessoal na área de produção e distribuição. Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
+        descricao: "Garantir que não haja nenhum item pessoal na área de produção e distribuição. <br> Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
         peso: "3,0%",
         pontos: "3",
     },
@@ -52,19 +52,19 @@ const rowsGente = [
     },
     {
         item: "8 As entrevistas de desligamento estão arquivadas e vistadas pelo gerente?",
-        descricao: "Verificar junto ao Líder de ADM os desligamentos e os arquivos das entrevistas Pontos críticos estão sendo tratados através de plano de ação - definição de perfil, ajuste de processos,...",
+        descricao: "Verificar junto ao Líder de ADM os desligamentos e os arquivos das entrevistas. <br> Pontos críticos estão sendo tratados através de plano de ação - definição de perfil, ajuste de processos,...",
         peso: "3,0%",
         pontos: "3",
     },
     {
         item: "9 A Operação tem e garante a execução do planejamento de Férias dos seus colaboradores?",
-        descricao: "Garantir que não haja nenhum funcionário com a utilização dos itens citados garantindo a padronização de atendimento prevista nas regras de qualidade. Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
+        descricao: "Garantir que não haja nenhum funcionário com a utilização dos itens citados garantindo a padronização de atendimento prevista nas regras de qualidade. <br> Verificação se não há nenhum relato em auditorias de Qualidade e Produtos - caso tenha no período da auditoria item será zerado.",
         peso: "3,0%",
         pontos: "3",
     },
     {
         item: "10 Os funcionários estão efetuando as marcações de pontos (entradas e saídas) devidamente uniformizados? Todos os funcionários que atendem a clientes portam crachás de identificação?",
-        descricao: "1. Verificar o registro de ponto - máximo 3% de ajustes manuais 3. Loja sem falhas de escalas cadastradas no sistema vs funcionário in loco (pegar um funcionário no dia da auditoria e verificar a sua escala no sistema de ponto) 4. Relógio apenas com registro na digital (se houver algum funcionário sem necessário atestado médico que valide falhas na digital)",
+        descricao: "1. Verificar o registro de ponto - máximo 3% de ajustes manuais 3. Loja sem falhas de escalas cadastradas no sistema vs funcionário in loco (pegar um funcionário no dia da auditoria e verificar a sua escala no sistema de ponto) 4. <br> Relógio apenas com registro na digital (se houver algum funcionário sem necessário atestado médico que valide falhas na digital)",
         peso: "4,0%",
         pontos: "4",
     },
@@ -156,13 +156,13 @@ const rowsGestao = [
 const rowsArea = [
     {
         item: "24 Os vestiários dos colaboradores, estão limpos e em ordem e os armários estão conservados e são suficientes para o número de funcionários.",
-        descricao: "Loja garante que todos os funcionários estejam com armários disponíveis? Área de Vestiários e banheiros estão limpos e organizados? (Verificar ficha de limpeza no local)",
+        descricao: "Loja garante que todos os funcionários estejam com armários disponíveis? <br> Área de Vestiários e banheiros estão limpos e organizados? <br> (Verificar ficha de limpeza no local)",
         peso: "3,0%",
         pontos: "3",
     },
     {
         item: "25 Os produtos do refeitório estão em temperatura acima de 60ºC (produtos quentes) e até 10ºC (produtos frios), seguindo o cardápio do PAT.",
-        descricao: "Cardápio atendido dentro da ficha técnica? Garante a meta de disperdício?",
+        descricao: "Cardápio atendido dentro da ficha técnica? <br> Garante a meta de disperdício?",
         peso: "3,0%",
         pontos: "3",
     },
@@ -175,10 +175,15 @@ const rowsArea = [
 ]
 ---
 
-<style>
+<style is:inline>
     .aval-line-sub td{
         font-weight: bold;
         background-color: #eee;
+    }
+
+    .tooltip-aval{
+        max-width: 400px;
+        text-align: left;
     }
 </style>
 
@@ -207,7 +212,7 @@ const rowsArea = [
                             <div class="d-flex align-items-baseline justify-content-between gap-1">
                                 <div>{item}</div>
 
-                                <div data-bs-toggle="tooltip" data-bs-title={descricao}>
+                                <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
                                     <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
                                 </div>
                             </div>
@@ -245,7 +250,7 @@ const rowsArea = [
                             <div class="d-flex align-items-baseline justify-content-between gap-1">
                                 <div>{item}</div>
 
-                                <div data-bs-toggle="tooltip" data-bs-title={descricao}>
+                                <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
                                     <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
                                 </div>
                             </div>
@@ -283,7 +288,7 @@ const rowsArea = [
                             <div class="d-flex align-items-baseline justify-content-between gap-1">
                                 <div>{item}</div>
 
-                                <div data-bs-toggle="tooltip" data-bs-title={descricao}>
+                                <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
                                     <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
                                 </div>
                             </div>
@@ -321,7 +326,7 @@ const rowsArea = [
                             <div class="d-flex align-items-baseline justify-content-between gap-1">
                                 <div>{item}</div>
 
-                                <div data-bs-toggle="tooltip" data-bs-title={descricao}>
+                                <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
                                     <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
                                 </div>
                             </div>
@@ -347,3 +352,17 @@ const rowsArea = [
         </tbody>
     </table>
 </div>
+
+<script is:inline>
+    window.addEventListener('load', () => {
+
+        $('[data-bs-toggle="tooltip-aval"]').tooltip({
+            html: true,
+        })
+
+        $('[data-bs-toggle="tooltip-aval"]').on('inserted.bs.tooltip',function () {
+            var thisClass5 = $(this).attr("class");
+            $('.tooltip-inner').addClass('tooltip-aval');
+        });
+    })
+</script>
