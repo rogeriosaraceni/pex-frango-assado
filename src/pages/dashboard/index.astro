@@ -4,11 +4,11 @@ import Header from '@includes/Header.astro';
 
 import ContentSelecao from './_ContentSelecao.astro'
 
-import ChartResultadoRegional from './_ChartResultadoRegional.astro';
+import ChartRegional from './_ChartRegional.astro';
+import ChartUnidade from './_ChartUnidade.astro';
 import ChartCategoriaNacional from './_ChartCategoriaNacional.astro';
 import ChartCategoriaRegional from './_ChartCategoriaRegional.astro';
-import ChartResultadoUnidade from './_ChartResultadoUnidade.astro';
-import ChartResultadoCategoriaUnidade from './_ChartResultadoCategoriaUnidade.astro';
+import ChartCategoriaUnidade from './_ChartCategoriaUnidade.astro';
 ---
 
 <style is:inline>
@@ -16,10 +16,11 @@ import ChartResultadoCategoriaUnidade from './_ChartResultadoCategoriaUnidade.as
         width: 100%;
     }
 
-    .box-chart.boxResultadoRegional{ height: 350px;}
+    .box-chart.boxRegional{ height: 350px;}
+    .box-chart.boxUnidade{ height: 350px;}
     .box-chart.boxCategoriaNacional{ height: 400px;}
     .box-chart.boxCategoriaRegional{ height: 400px;}
-    .box-chart.boxResultadoCategoriaUnidade{ height: 400px}
+    .box-chart.boxCategoriaUnidade{ height: 400px}
 
     .title-chart{
         font-size: 1.3rem;
@@ -54,11 +55,11 @@ import ChartResultadoCategoriaUnidade from './_ChartResultadoCategoriaUnidade.as
 
             <div class="row">
                 <div class="col-lg-12">
-                    <ChartResultadoRegional />
+                    <ChartRegional />
                 </div>
 
                 <div class="col-lg-12">
-                    <ChartResultadoUnidade />
+                    <ChartUnidade />
                 </div>
 
                 <div class="col-lg-6">
@@ -70,7 +71,7 @@ import ChartResultadoCategoriaUnidade from './_ChartResultadoCategoriaUnidade.as
                 </div>
 
                 <div class="col-lg-12">
-                    <ChartResultadoCategoriaUnidade />
+                    <ChartCategoriaUnidade />
                 </div>
             </div>
         </section>

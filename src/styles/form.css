@@ -1,5 +1,6 @@
 /* ////////////////////////////////////////////////////////////////////
 input
+form-control / form-select
 form-check-label
 form-check-input
 form-group
@@ -35,9 +36,14 @@ input[type=number][readonly] {
     -moz-appearance: textfield;
 }
 
+/* --------------------------------------------------------------------
+form-control / form-select
+* -------------------------------------------------------------------- */
 .form-control,
 .form-select {
     font-size: 0.9rem;
+    padding: 0.275rem 2.25rem 0.275rem 0.75rem;
+
 }
 
 /* --------------------------------------------------------------------
@@ -82,8 +88,6 @@ label-clearfix
     display: block;
     clear: both;
     content: "\00a0";
-
-    margin-top: 0.2rem;
 }
 
 @media(max-width: 1200px) {

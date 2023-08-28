@@ -4,7 +4,7 @@ import CardCardBody from '@componentsLayout/CardCardBody.astro'
 
 <CardCardBody>
     <h5 class="title-chart">Resultado por Regional</h5>
-    <div class="box-chart boxResultadoRegional" id="chartdiv-resultado-regional"></div>
+    <div class="box-chart boxRegional" id="chartdiv-regional"></div>
 </CardCardBody>
 
 <script is:inline>
@@ -12,7 +12,7 @@ import CardCardBody from '@componentsLayout/CardCardBody.astro'
 
         am4core.useTheme(am4themes_animated);
 
-        var chart = am4core.create("chartdiv-resultado-regional", am4charts.XYChart);
+        var chart = am4core.create("chartdiv-regional", am4charts.XYChart);
 
         // Disable amChart Logo
         if(chart.logo){
