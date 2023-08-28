@@ -9,6 +9,7 @@ import ChartUnidade from './_ChartUnidade.astro';
 import ChartCategoriaNacional from './_ChartCategoriaNacional.astro';
 import ChartCategoriaRegional from './_ChartCategoriaRegional.astro';
 import ChartCategoriaUnidade from './_ChartCategoriaUnidade.astro';
+import BtnPrincipal from '@components/Btns/BtnPrincipal.astro';
 ---
 
 <style is:inline>
@@ -41,12 +42,16 @@ import ChartCategoriaUnidade from './_ChartCategoriaUnidade.astro';
     <main data-el="main-app" class="main-app">
         <section class="container-fluid">
             <nav aria-label="breadcrumb" class="breadcrumb-app">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="/principal/"><i class="bi bi-house-fill"></i></a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                </ol>
+                <div class="d-flex align-items-center justify-content-between gap-1">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="/principal/"><i class="bi bi-house-fill"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+
+                    <BtnPrincipal />
+                </div>
             </nav>
         </section>
 
