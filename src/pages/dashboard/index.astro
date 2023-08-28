@@ -3,10 +3,12 @@ import Layout from '@layouts/Layout.astro';
 import Header from '@includes/Header.astro';
 
 import ContentSelecao from './_ContentSelecao.astro'
-import ContentChart1 from './_ContentChart1.astro';
-import ContentChart2 from './_ContentChart2.astro';
-import ContentChart3 from './_ContentChart3.astro';
 
+import ChartResultadoRegional from './_ChartResultadoRegional.astro';
+import ChartCategoriaNacional from './_ChartCategoriaNacional.astro';
+import ChartCategoriaRegional from './_ChartCategoriaRegional.astro';
+import ChartResultadoUnidade from './_ChartResultadoUnidade.astro';
+import ChartResultadoCategoriaUnidade from './_ChartResultadoCategoriaUnidade.astro';
 ---
 
 <style is:inline>
@@ -14,9 +16,10 @@ import ContentChart3 from './_ContentChart3.astro';
         width: 100%;
     }
 
-    .box-chart.box-1{ height: 350px;}
-    .box-chart.box-2{ height: 350px;}
-    .box-chart.box-3{ height: 350px;}
+    .box-chart.boxResultadoRegional{ height: 350px;}
+    .box-chart.boxCategoriaNacional{ height: 400px;}
+    .box-chart.boxCategoriaRegional{ height: 400px;}
+    .box-chart.boxResultadoCategoriaUnidade{ height: 400px}
 
     .title-chart{
         font-size: 1.3rem;
@@ -51,18 +54,25 @@ import ContentChart3 from './_ContentChart3.astro';
 
             <div class="row">
                 <div class="col-lg-12">
-                    <ContentChart1 />
+                    <ChartResultadoRegional />
+                </div>
+
+                <div class="col-lg-12">
+                    <ChartResultadoUnidade />
                 </div>
 
                 <div class="col-lg-6">
-                    <ContentChart2 />
+                    <ChartCategoriaNacional />
                 </div>
 
                 <div class="col-lg-6">
-                    <ContentChart3 />
+                    <ChartCategoriaRegional />
+                </div>
+
+                <div class="col-lg-12">
+                    <ChartResultadoCategoriaUnidade />
                 </div>
             </div>
-
         </section>
     </main>
 </Layout>

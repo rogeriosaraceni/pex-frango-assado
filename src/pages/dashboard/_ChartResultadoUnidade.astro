@@ -1,0 +1,176 @@
+---
+import CardCardBody from '@componentsLayout/CardCardBody.astro'
+---
+
+<CardCardBody>
+    <h5 class="title-chart">Resultado por Unidade</h5>
+    <div class="box-chart boxResultadoRegional" id="chartdiv-resultado-unidade"></div>
+</CardCardBody>
+
+<script is:inline>
+    am4core.ready(function() {
+
+        am4core.useTheme(am4themes_animated);
+
+        var chart = am4core.create("chartdiv-resultado-unidade", am4charts.XYChart);
+
+        // Disable amChart Logo
+        if(chart.logo){
+            chart.logo.disabled = true;
+        }
+
+        chart.padding(20, 0, 0, 0);
+
+        // Add data
+        chart.data = [
+            {
+                posicao: "100",
+                unidade: "Guará",
+            },
+            {
+                posicao: "97",
+                unidade: "Cravinhos",
+            },
+            {
+                posicao: "95",
+                unidade: "Cesário Lange",
+            },
+            {
+                posicao: "94",
+                unidade: "Itu",
+            },
+            {
+                posicao: "92",
+                unidade: "Castelo Branco",
+            },
+
+
+            {
+                posicao: "90",
+                unidade: "Carvalho Pinto",
+            },
+            {
+                posicao: "89",
+                unidade: "Aparecida",
+            },
+            {
+                posicao: "87",
+                unidade: "Roseira",
+            },
+            {
+                posicao: "85",
+                unidade: "Taubaté",
+            },
+            {
+                posicao: "84",
+                unidade: "Jacareí",
+            },
+
+
+            {
+                posicao: "82",
+                unidade: "Cubatão",
+            },
+            {
+                posicao: "80",
+                unidade: "Caieiras",
+            },
+            {
+                posicao: "79",
+                unidade: "Cajamar",
+            },
+            {
+                posicao: "78",
+                unidade: "Diadema",
+            },
+
+
+            {
+                posicao: "77",
+                unidade: "Mogi Guaçu",
+            },
+            {
+                posicao: "75",
+                unidade: "Trevo Campinas",
+            },
+            {
+                posicao: "74",
+                unidade: "Jaguariúna",
+            },
+            {
+                posicao: "72",
+                unidade: "Louveira",
+            },
+            {
+                posicao: "70",
+                unidade: "Campinas",
+            },
+            {
+                posicao: "69",
+                unidade: "Itupeva",
+            },
+
+
+            {
+                posicao: "68",
+                unidade: "Atib.66 (Espelho)",
+            },
+            {
+                posicao: "67",
+                unidade: "Dom Pedro 66",
+            },
+            {
+                posicao: "66",
+                unidade: "Cambuí",
+            },
+            {
+                posicao: "65",
+                unidade: "Fernão Dias",
+            },
+            {
+                posicao: "64",
+                unidade: "Atibaia",
+            },
+        ];
+
+        // Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "unidade";
+        categoryAxis.renderer.grid.template.location = 0;
+        categoryAxis.renderer.minGridDistance = 10;
+        categoryAxis.renderer.grid.template.disabled = true;
+        categoryAxis.renderer.labels.template.horizontalCenter = "middle";
+        categoryAxis.renderer.labels.template.verticalCenter = "middle";
+        categoryAxis.renderer.labels.template.rotation = -45;
+        categoryAxis.renderer.labels.template.fontSize = 11;
+
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.renderer.grid.template.disabled = true;
+        valueAxis.renderer.labels.template.disabled = true;
+
+        // Create series
+        var series = chart.series.push(new am4charts.ColumnSeries());
+        series.dataFields.valueY = "posicao";
+        series.dataFields.categoryX = "unidade";
+        series.name = "Posicao";
+        series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}%[/]";
+        series.columns.template.fillOpacity = .8;
+        series.columns.template.strokeWidth = 0;
+
+        series.columns.template.column.cornerRadiusTopLeft = 10;
+        series.columns.template.column.cornerRadiusTopRight = 10;
+        series.columns.template.column.fillOpacity = 0.8;
+
+        var bullet = series.bullets.push(new am4charts.LabelBullet())
+        bullet.interactionsEnabled = false
+        bullet.dy = -5;
+        bullet.fontSize = 11;
+        bullet.label.text = '{valueY}%';
+        bullet.label.fill = am4core.color('#000');
+
+        // as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+        series.columns.template.adapter.add("fill", function(fill, target){
+            return chart.colors.getIndex(target.dataItem.index);
+        });
+    });
+</script>

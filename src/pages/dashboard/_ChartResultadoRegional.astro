@@ -1,0 +1,88 @@
+---
+import CardCardBody from '@componentsLayout/CardCardBody.astro'
+---
+
+<CardCardBody>
+    <h5 class="title-chart">Resultado por Regional</h5>
+    <div class="box-chart boxResultadoRegional" id="chartdiv-resultado-regional"></div>
+</CardCardBody>
+
+<script is:inline>
+    am4core.ready(function() {
+
+        am4core.useTheme(am4themes_animated);
+
+        var chart = am4core.create("chartdiv-resultado-regional", am4charts.XYChart);
+
+        // Disable amChart Logo
+        if(chart.logo){
+            chart.logo.disabled = true;
+        }
+
+        chart.padding(0, 0, 0, 0);
+
+        // Add data
+        chart.data = [
+            {
+                "regional": "A CONTRATAR",
+                "posicao": 89
+            },
+            {
+                "regional": "GODOY",
+                "posicao": 87
+            },
+            {
+                "regional": "JANAINA",
+                "posicao": 85
+            },
+            {
+                "regional": "PEDRO",
+                "posicao": 83
+            },
+            {
+                "regional": "RICARDO",
+                "posicao": 81
+            },
+        ];
+
+        // Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "regional";
+        categoryAxis.renderer.grid.template.location = 0;
+        categoryAxis.renderer.minGridDistance = 10;
+        categoryAxis.renderer.grid.template.disabled = true;
+        categoryAxis.renderer.labels.template.horizontalCenter = "middle";
+        categoryAxis.renderer.labels.template.verticalCenter = "middle";
+        categoryAxis.renderer.labels.template.rotation = 0;
+        categoryAxis.renderer.labels.template.fontSize = 11;
+
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.renderer.grid.template.disabled = true;
+        valueAxis.renderer.labels.template.disabled = true;
+
+        // Create series
+        var series = chart.series.push(new am4charts.ColumnSeries());
+        series.dataFields.valueY = "posicao";
+        series.dataFields.categoryX = "regional";
+        series.name = "Posicao";
+        series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}%[/]";
+        series.columns.template.fillOpacity = .8;
+        series.columns.template.strokeWidth = 0;
+
+        series.columns.template.column.cornerRadiusTopLeft = 10;
+        series.columns.template.column.cornerRadiusTopRight = 10;
+        series.columns.template.column.fillOpacity = 0.8;
+
+        var bullet = series.bullets.push(new am4charts.LabelBullet())
+        bullet.interactionsEnabled = false
+        bullet.dy = -5;
+        bullet.fontSize = 11;
+        bullet.label.text = '{valueY}%';
+        bullet.label.fill = am4core.color('#000');
+
+        // as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+        series.columns.template.adapter.add("fill", function(fill, target){
+            return chart.colors.getIndex(target.dataItem.index);
+        });
+    });
+</script>

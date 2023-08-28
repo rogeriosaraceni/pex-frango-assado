@@ -3,8 +3,8 @@ import CardCardBody from '@componentsLayout/CardCardBody.astro'
 ---
 
 <CardCardBody>
-    <h5 class="title-chart">Chart 3</h5>
-    <div class="box-chart box-3" id="chartdiv-chart3"></div>
+    <h5 class="title-chart">Resultado por Categoria Nacional</h5>
+    <div class="box-chart boxCategoriaNacional" id="chartdiv-categoria-nacional"></div>
 </CardCardBody>
 
 <script is:inline>
@@ -12,7 +12,7 @@ import CardCardBody from '@componentsLayout/CardCardBody.astro'
 
         am4core.useTheme(am4themes_animated);
 
-        var chart = am4core.create("chartdiv-chart3", am4charts.PieChart);
+        var chart = am4core.create("chartdiv-categoria-nacional", am4charts.PieChart);
 
         // Disable amChart Logo
         if(chart.logo){
@@ -21,37 +21,55 @@ import CardCardBody from '@componentsLayout/CardCardBody.astro'
 
         chart.data = [
             {
-                "status": "Item 1",
-                "position": 60,
-                "color": "rgba(255, 176, 0, 0.6);"
+                "categoria": "Digital",
+                "posicao": 20,
             },
             {
-                "status": "Item 2",
-                "position": 20,
-                "color": "rgba(255, 176, 0, 0.7);"
+                "categoria": "Margem Contribuição",
+                "posicao": 10,
             },
             {
-                "status": "Item 3",
-                "position": 10,
-                "color": "rgba(255, 176, 0, 0.8);"
+                "categoria": "Turnover",
+                "posicao": 10,
             },
             {
-                "status": "Item 4",
-                "position": 10,
-                "color": "rgba(255, 176, 0, 1);"
+                "categoria": "Food Cost",
+                "posicao": 10,
+            },
+            {
+                "categoria": "Faturamento",
+                "posicao": 5,
+            },
+            {
+                "categoria": "Armazem Estoque",
+                "posicao":5,
+            },
+            {
+                "categoria": "Cozinha Produção",
+                "posicao": 10,
+            },
+            {
+                "categoria": "Operações",
+                "posicao": 10,
+            },
+            {
+                "categoria": "Requisitos Legais",
+                "posicao": 5,
+            },
+            {
+                "categoria": "Gente Gestão",
+                "posicao": 15,
             },
         ];
 
         // Add and configure Series
         var pieSeries = chart.series.push(new am4charts.PieSeries());
-        pieSeries.dataFields.value = "position";
-        pieSeries.dataFields.category = "status";
+        pieSeries.dataFields.value = "posicao";
+        pieSeries.dataFields.category = "categoria";
 
-        pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.stroke = am4core.color();
         pieSeries.slices.template.strokeWidth = 1;
         pieSeries.slices.template.strokeOpacity = 1;
-        pieSeries.slices.template.propertyFields.fill = "color";
-        pieSeries.slices.template.propertyFields.stroke = "color";
 
         //desabilita linha
         pieSeries.ticks.template.disabled = true;
@@ -60,8 +78,8 @@ import CardCardBody from '@componentsLayout/CardCardBody.astro'
         pieSeries.alignLabels = false;
         pieSeries.labels.template.fontSize = 12;
         pieSeries.labels.template.text = "{value.percent.formatNumber('#')}%";
-        pieSeries.labels.template.radius = am4core.percent(-50);
-        pieSeries.labels.template.fill = am4core.color("#C72200");
+        pieSeries.labels.template.radius = am4core.percent(-20);
+        pieSeries.labels.template.fill = am4core.color("#fff");
 
         // This creates initial animation
         pieSeries.hiddenState.properties.opacity = 1;
@@ -80,8 +98,5 @@ import CardCardBody from '@componentsLayout/CardCardBody.astro'
         var markerTemplate = chart.legend.markers.template;
         markerTemplate.width = 10;
         markerTemplate.height = 10;
-
-
-
     })
 </script>

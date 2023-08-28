@@ -1,13 +1,26 @@
 ---
 import CardCardBodySectionTitle from '@componentsLayout/CardCardBodySectionTitle.astro'
 
-import SelectRegional from '@componentsForm/SelectRegional.astro'
-import SelectUnidade from '@components/Form/SelectUnidade.astro'
 import SelectMes from '@components/Form/SelectMes.astro'
 import BtnOk from '@components/Form/BtnOk.astro'
 ---
 
 <CardCardBodySectionTitle labelTitles = "Seleção">
+    <form action="" method="">
+        <section class="row">
+            <SelectMes col="col-xl-2 col-lg-3 col-md-6 col-sm-6" />
+            <BtnOk
+                col="col-xl-2 col-lg-1 col-md-6 col-sm-6"
+                last="sm"
+                btnLast="lg"
+            />
+        </section>
+    </form>
+</CardCardBodySectionTitle>
+
+
+
+<!-- <form action="" method="">
     <section class="row">
         <SelectRegional col="col-xl-2 col-lg-3 col-md-6 col-sm-12" />
         <SelectUnidade col="col-xl-3 col-lg-5 col-md-6 col-sm-12" />
@@ -18,4 +31,4 @@ import BtnOk from '@components/Form/BtnOk.astro'
             btnLast="lg"
         />
     </section>
-</CardCardBodySectionTitle>
+</form> -->

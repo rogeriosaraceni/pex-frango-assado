@@ -1,0 +1,110 @@
+---
+import SelectRegional from '@components/Form/SelectRegional.astro';
+import SelectUnidade from '@components/Form/SelectUnidade.astro';
+import CardCardBody from '@componentsLayout/CardCardBody.astro'
+---
+
+<CardCardBody>
+    <h5 class="title-chart">Resultado por Categoria e Regional</h5>
+    <form action="" method="">
+        <section class="row">
+            <SelectRegional col="col-xl-3 col-lg-3 col-md-6 col-sm-12" />
+        </section>
+    </form>
+
+    <div class="box-chart boxCategoriaRegional" id="chartdiv-categoria-regional"></div>
+</CardCardBody>
+
+<script is:inline>
+    am4core.ready(function() {
+
+        am4core.useTheme(am4themes_animated);
+
+        var chart = am4core.create("chartdiv-categoria-regional", am4charts.PieChart);
+
+        // Disable amChart Logo
+        if(chart.logo){
+            chart.logo.disabled = true;
+        }
+
+        chart.data = [
+            {
+                "categoria": "Digital",
+                "posicao": 20,
+            },
+            {
+                "categoria": "Margem Contribuição",
+                "posicao": 10,
+            },
+            {
+                "categoria": "Turnover",
+                "posicao": 10,
+            },
+            {
+                "categoria": "Food Cost",
+                "posicao": 10,
+            },
+            {
+                "categoria": "Faturamento",
+                "posicao": 5,
+            },
+            {
+                "categoria": "Armazem Estoque",
+                "posicao":5,
+            },
+            {
+                "categoria": "Cozinha Produção",
+                "posicao": 10,
+            },
+            {
+                "categoria": "Operações",
+                "posicao": 10,
+            },
+            {
+                "categoria": "Requisitos Legais",
+                "posicao": 5,
+            },
+            {
+                "categoria": "Gente Gestão",
+                "posicao": 15,
+            },
+        ];
+
+        // Add and configure Series
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "posicao";
+        pieSeries.dataFields.category = "categoria";
+
+        pieSeries.slices.template.stroke = am4core.color();
+        pieSeries.slices.template.strokeWidth = 1;
+        pieSeries.slices.template.strokeOpacity = 1;
+
+        //desabilita linha
+        pieSeries.ticks.template.disabled = true;
+
+        //pieSeries.labels.template.disabled = true;
+        pieSeries.alignLabels = false;
+        pieSeries.labels.template.fontSize = 12;
+        pieSeries.labels.template.text = "{value.percent.formatNumber('#')}%";
+        pieSeries.labels.template.radius = am4core.percent(-20);
+        pieSeries.labels.template.fill = am4core.color("#fff");
+
+        // This creates initial animation
+        pieSeries.hiddenState.properties.opacity = 1;
+        pieSeries.hiddenState.properties.endAngle = -90;
+        pieSeries.hiddenState.properties.startAngle = -90;
+
+        chart.legend = new am4charts.Legend();
+        chart.legend.align = "center";
+        chart.legend.fontSize = 11;
+        chart.legend.valueLabels.template.align = "left"
+        chart.legend.valueLabels.template.textAlign = "left"
+        chart.legend.itemContainers.template.paddingTop = 2;
+        chart.legend.itemContainers.template.paddingBottom = 2;
+
+        // tamanho da legenda
+        var markerTemplate = chart.legend.markers.template;
+        markerTemplate.width = 10;
+        markerTemplate.height = 10;
+    })
+</script>
