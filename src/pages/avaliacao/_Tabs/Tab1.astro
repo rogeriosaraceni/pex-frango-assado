@@ -183,6 +183,21 @@ const rowsArea = [
         text-align: left;
     }
 
+    .list-add{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 0.5rem
+    }
+    .list-add li{
+        width: 20px;
+        line-height: 1;
+    }
+    .list-add li a{ display: block;}
+
     [data-bs-theme=light] {
         .aval-line-sub td{
             background-color: #eee;
@@ -199,8 +214,8 @@ const rowsArea = [
 <div class="table-responsive" style="max-height: 500px">
     <table class="table table-bordered table-fixed small text-center fixThead">
         <thead>
-            <th style="width: 500px">Item</th>
-            <th style="width: 070px">Anexo</th>
+            <th style="width: 600px">Item</th>
+            <th style="width: 080px">Adicionais</th>
             <th style="width: 070px">Peso</th>
             <th style="width: 070px">Pontos</th>
             <th style="width: 110px">Pontos Alcançado</th>
@@ -219,15 +234,25 @@ const rowsArea = [
                         <td class="text-start">
                             <div class="d-flex align-items-baseline justify-content-between gap-1">
                                 <div>{item}</div>
-
-                                <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
-                                    <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
-                                </div>
                             </div>
                         </td>
 
                         <td>
-                            <BtnAnexo />
+                            <ul class="list-add">
+                                <li>
+                                    <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
+                                        <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <BtnAnexo />
+                                </li>
+
+                                <li>
+
+                                </li>
+                            </ul>
                         </td>
 
                         <td>{peso}</td>
@@ -253,15 +278,25 @@ const rowsArea = [
                         <td class="text-start">
                             <div class="d-flex align-items-baseline justify-content-between gap-1">
                                 <div>{item}</div>
-
-                                <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
-                                    <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
-                                </div>
                             </div>
                         </td>
 
                         <td>
-                            <BtnAnexo />
+                            <ul class="list-add">
+                                <li>
+                                    <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
+                                        <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <BtnAnexo />
+                                </li>
+
+                                <li>
+
+                                </li>
+                            </ul>
                         </td>
 
                         <td>{peso}</td>
@@ -287,15 +322,25 @@ const rowsArea = [
                         <td class="text-start">
                             <div class="d-flex align-items-baseline justify-content-between gap-1">
                                 <div>{item}</div>
-
-                                <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
-                                    <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
-                                </div>
                             </div>
                         </td>
 
                         <td>
-                            <BtnAnexo />
+                            <ul class="list-add">
+                                <li>
+                                    <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
+                                        <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <BtnAnexo />
+                                </li>
+
+                                <li>
+
+                                </li>
+                            </ul>
                         </td>
 
                         <td>{peso}</td>
@@ -321,15 +366,25 @@ const rowsArea = [
                         <td class="text-start">
                             <div class="d-flex align-items-baseline justify-content-between gap-1">
                                 <div>{item}</div>
-
-                                <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
-                                    <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
-                                </div>
                             </div>
                         </td>
 
                         <td>
-                            <BtnAnexo />
+                            <ul class="list-add">
+                                <li>
+                                    <div data-bs-toggle="tooltip-aval" data-bs-title={descricao}>
+                                        <i class="bi bi-info-circle-fill text-secondary icon-tab fs-6"></i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <BtnAnexo />
+                                </li>
+
+                                <li>
+
+                                </li>
+                            </ul>
                         </td>
 
                         <td>{peso}</td>
